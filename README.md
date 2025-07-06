@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛡️ PhishGuard — Phishing Email Detector WebTool
 
-## Getting Started
+An advanced full-stack web application that helps users detect phishing, suspicious, and safe emails with real-time threat intelligence.
 
-First, run the development server:
+![PhishGuard Banner](https://via.placeholder.com/1000x300?text=PhishGuard+Phishing+Detector+WebTool) <!-- Replace with actual banner if available -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> https://phishguard-email.whoisalok.tech/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📌 Features
 
-To learn more about Next.js, take a look at the following resources:
+- 📝 Paste or upload suspicious email content
+- 🔍 Detect and classify as **Safe**, **Suspicious**, or **Phishing**
+- 🌐 Extract & scan URLs using real-world threat intelligence APIs
+- 🧠 Rule-based keyword detection
+- 📊 Risk score (0–100%) + explanation
+- 💡 Human-readable summaries (optional OpenAI API integration)
+- 🧑‍💻 Admin panel to view total scans and stats (optional)
+- 🌗 Light/Dark mode UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧰 Tech Stack
 
-## Deploy on Vercel
+| Layer          | Technologies                                      |
+|----------------|---------------------------------------------------|
+| Frontend       | Next.js (React), Tailwind CSS                     |
+| Backend        | Node.js, Express.js                               |
+| Database       | MongoDB Atlas                                     |
+| External APIs  | Google Safe Browsing, PhishTank, WhoisXML         |
+| Optional       | OpenAI GPT API for explanations                   |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Architecture Overview
+
+1. **User Input:** Paste/upload email content.
+2. **Frontend (Next.js):** Sends data to backend.
+3. **Backend (Express):**
+   - Extracts URLs, scans for keywords.
+   - Calls threat intelligence APIs.
+   - Generates classification + risk score.
+4. **Result Display:** Frontend shows result with explanation.
+5. **Database (MongoDB):** Saves scans & optional user feedback.
+
+---
+
+## 🧪 External APIs Used
+
+| API                  | Purpose                                  |
+|----------------------|------------------------------------------|
+| Google Safe Browsing | Check URLs for malware/phishing threats  |
+| PhishTank API        | Detect known phishing URLs               |
+| WhoisXML API         | Get domain age & sender reputation       |
+
+---
+
+
