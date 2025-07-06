@@ -261,15 +261,8 @@ export default function Home() {
                   <li><Link href="/forgot-password" className="hover:text-white transition-colors">Reset Password</Link></li>
                 </ul>
               </div>
-              {/* <div>
-                <h3 className="text-lg font-semibold mb-4">Support</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                </ul>
-              </div> */}
             </div>
+            
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 space-y-2 text-sm">
               <p>&copy; 2025 <span className="text-white font-semibold">PhishGuard</span>. All rights reserved.</p>
               <p>
@@ -278,14 +271,14 @@ export default function Home() {
                   href="https://github.com/alokumar01"
                   className="hover:text-white transition-colors font-extrabold text-cyan-300 italic"
                 >
-                  Alok
+                  Alok Kumar
                 </a>{' '}
                 and{' '}
                 <a
                   href="https://github.com/SandeepTech06"
                   className="hover:text-white transition-colors font-extrabold italic text-cyan-300"
                 >
-                  Sandeep
+                  Sandeep Kumar
                 </a>
               </p>
             </div>

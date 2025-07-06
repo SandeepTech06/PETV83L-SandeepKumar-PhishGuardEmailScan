@@ -14,6 +14,7 @@ export default function Scanner() {
   const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
 
+  
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/login');

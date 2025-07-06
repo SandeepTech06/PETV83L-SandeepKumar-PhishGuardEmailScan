@@ -36,7 +36,6 @@ export default function Results() {
     setDarkMode(isDark);
     document.documentElement.classList.toggle("dark", isDark);
 
-    // Fetch scan results by ID from backend
     const scanId = localStorage.getItem("lastScanId");
     if (!scanId) {
       router.push("/scanner");
