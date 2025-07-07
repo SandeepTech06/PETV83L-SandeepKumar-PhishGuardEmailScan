@@ -59,5 +59,34 @@ An advanced full-stack web application that helps users detect phishing, suspici
 | WhoisXML API         | Get domain age & sender reputation       |
 
 ---
+# Data Flow Diagram for Phishing Email Detector WebTool
+
+This moderate Level-0 Data Flow Diagram (DFD) illustrates the core data flow in the Phishing Email Detector WebTool, showing how users and admins interact with the system, external APIs, and the database.
+
+# Graph TD
+    A[User] -->|Login/Register| B(Phishing Detector System)
+    A -->|Submit Email| B
+    A -->|View Scan History| B
+    C[Admin] -->|View Statistics| B
+    B -->|Extract URLs/Keywords| D[Rule-Based Analysis]
+    B -->|Query Threat Data| E[External APIs]
+    B -->|Store/Retrieve Data| F[(MongoDB Database)]
+    D -->|Analysis Results| B
+    E -->|Threat Data| B
+    F -->|Scan History| B
+    B -->|Result & Score| A
+    B -->|Scan Statistics| C
+# Explanation
+- Entities:
+1. User: Submits email content (paste/upload), logs in/registers, and views scan history.
+2. Admin: Views scan statistics and flagged emails.
+3. External APIs: Includes Google Safe Browsing, PhishTank, and WhoisXML for threat intelligence.
+- Processes:
+1. Phishing Detector System: Manages authentication, email analysis, API queries, and result display.
+2.  Rule-Based Analysis: Extracts URLs and keywords for phishing detection.
+3.  Data Store: MongoDB Database stores scan results and history.
+4.  Data Flows: Email submission, analysis, API queries, data storage, and result/statistics display.
+
+---
 
 
